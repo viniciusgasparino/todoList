@@ -3,7 +3,20 @@
 function HomePage(){
   return(
     <>
-      Ola mundo
+      <h1>Lista de tarefas</h1>
+
+      <div>
+        <ul>
+          <li>tarefa 1</li>
+          <li>tarefa 2</li>
+        </ul>
+      </div>
+
+      <div>
+        <input />
+        <button>+</button>
+      </div>
+
     </>
   )
 }
