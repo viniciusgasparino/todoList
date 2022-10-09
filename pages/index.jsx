@@ -1,21 +1,34 @@
-
+import {useState} from "react"
 
 function HomePage(){
+  const [text,setText] = useState("")
+  const [list,setList] = useState(["tarefa1","tarefa2"])
+
+
+  function adicionar(){
+    
+  }
+
   return(
     <>
       <h1>Lista de tarefas</h1>
 
       <div>
         <ul>
-          <li>tarefa 1</li>
-          <li>tarefa 2</li>
+          <li></li>
         </ul>
       </div>
 
       <div>
-        <input />
-        <button>+</button>
+        <input 
+          placeholder="adicione uma tarefa" 
+          value={text} 
+          onChange={(e)=>{setText(e.target.value)}}
+        />
+        <button onClick={adicionar}>++++</button>
       </div>
+
+      <p>{text}</p>
 
     </>
   )
