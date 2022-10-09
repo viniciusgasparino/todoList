@@ -14,9 +14,15 @@ function HomePage(){
       <h1>Lista de tarefas</h1>
 
       <div>
-        <ul>
-          <li></li>
-        </ul>
+        {
+          list.map((task,pos)=>{
+             return(
+              <ul key={`item-${pos}`}>
+                <li>{task}</li>
+              </ul>
+             ) 
+          })
+        }
       </div>
 
       <div>
