@@ -1,4 +1,6 @@
 import {useState} from "react"
+import Container from "../components/container/Container"
+ 
 
 function HomePage(){
   const [text,setText] = useState("")
@@ -21,27 +23,29 @@ function HomePage(){
     <>
       <h1>Lista de tarefas</h1>
 
-      <div>
-        {
-          list.map((task,pos)=>{
-             return(
-              <ul key={`item-${pos}`}>
-                <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
-              </ul>
-             ) 
-          })
-        }
-      </div>
-
+    <Container>
       <div>
         <input 
           placeholder="adicione uma tarefa" 
           value={text} 
           onChange={(e)=>{setText(e.target.value)}}
         />
-        <button onClick={adicionar}>++++</button>
+        <button onClick={adicionar}>+</button>
       </div>
-
+      
+      <div>
+        {
+          list.map((task,pos)=>{
+            return(
+              <ul key={`item-${pos}`}>
+                <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
+              </ul>
+            ) 
+          })
+        }
+      </div>
+    </Container>  
+ 
       
 
     </>
