@@ -1,4 +1,5 @@
 import {useState} from "react"
+import styles from "./index.module.css"
 import Container from "../components/container/Container"
 import Titulo from "../components/titulo/Titulo"
 import Content from "../components/content/Content"
@@ -41,9 +42,9 @@ function HomePage(){
           {
             list.map((task,pos)=>{
               return(
-                <ul key={`item-${pos}`}>
+                <div className={styles.div} key={`item-${pos}`}>
                   <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
-                </ul>
+                </div>
               ) 
             })
           }
