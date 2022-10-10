@@ -11,7 +11,10 @@ function HomePage(){
   }
 
   const apagar = (pos) => {
-    console.log("Apagando" + pos)
+    setList(list.filter((item,i) =>
+        pos != i
+      )
+    )
   }
 
   return(
@@ -39,7 +42,7 @@ function HomePage(){
         <button onClick={adicionar}>++++</button>
       </div>
 
-      <p>{text}</p>
+      
 
     </>
   )
