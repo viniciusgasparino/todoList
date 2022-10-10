@@ -3,8 +3,9 @@ import Container from "../components/container/Container"
 import Titulo from "../components/titulo/Titulo"
 import Content from "../components/content/Content"
 import Input from "../components/input/Input"
+import Button from "../components/button/Button"
 
-    
+
 function HomePage(){
   const [text,setText] = useState("")
   const [list,setList] = useState(["tarefa1","tarefa2"])
@@ -33,7 +34,7 @@ function HomePage(){
             value={text} 
             onChange={(e)=>{setText(e.target.value)}}
           />
-          <button onClick={adicionar}>+</button>
+          <Button onClick={adicionar}>+</Button>
         </Content>
 
         <Content>
