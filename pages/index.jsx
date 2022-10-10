@@ -6,7 +6,12 @@ function HomePage(){
 
 
   function adicionar(){
-    
+    setList([...list,text])
+    setText("")
+  }
+
+  const apagar = (pos) => {
+    console.log("Apagando" + pos)
   }
 
   return(
@@ -18,7 +23,7 @@ function HomePage(){
           list.map((task,pos)=>{
              return(
               <ul key={`item-${pos}`}>
-                <li>{task}</li>
+                <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
               </ul>
              ) 
           })
