@@ -1,5 +1,7 @@
 import {useState} from "react"
 import Container from "../components/container/Container"
+import Titulo from "../components/titulo/Titulo"
+import Content from "../components/content/Content"
  
 
 function HomePage(){
@@ -21,30 +23,30 @@ function HomePage(){
 
   return(
     <>
-      <h1>Lista de tarefas</h1>
+      <Titulo titulo="Lista de Tarefas"/>
 
-    <Container>
-      <div>
-        <input 
-          placeholder="adicione uma tarefa" 
-          value={text} 
-          onChange={(e)=>{setText(e.target.value)}}
-        />
-        <button onClick={adicionar}>+</button>
-      </div>
-      
-      <div>
-        {
-          list.map((task,pos)=>{
-            return(
-              <ul key={`item-${pos}`}>
-                <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
-              </ul>
-            ) 
-          })
-        }
-      </div>
-    </Container>  
+      <Container>
+        <Content>
+          <input 
+            placeholder="adicione uma tarefa" 
+            value={text} 
+            onChange={(e)=>{setText(e.target.value)}}
+          />
+          <button onClick={adicionar}>+</button>
+        </Content>
+
+        <Content>
+          {
+            list.map((task,pos)=>{
+              return(
+                <ul key={`item-${pos}`}>
+                  <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
+                </ul>
+              ) 
+            })
+          }
+        </Content>
+      </Container>  
  
       
 
