@@ -13,8 +13,14 @@ function HomePage(){
 
 
   function adicionar(){
-    setList([...list,text])
-    setText("")
+    if(text){
+      setList([...list,text])
+      setText("")
+    }else{
+      alert("insira um valor")
+      return
+    }
+    
   }
 
   const apagar = (pos) => {

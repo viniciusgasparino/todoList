@@ -1,5 +1,5 @@
 .div{
-  background-color: antiquewhite;
+  background-color: white;
   margin-bottom: 20px;
   width: 100%;
   min-width: 400px;
@@ -13,6 +13,7 @@
 }
 
 .div span{
-  background-color: blue;
+  background-color: rgb(56, 56, 240);
   float: right;
+  cursor: pointer;
 }
