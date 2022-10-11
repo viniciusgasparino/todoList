@@ -1,11 +1,18 @@
 .div{
   background-color: antiquewhite;
   margin-bottom: 20px;
+  width: 100%;
+  min-width: 400px;
 }
 
 .div li{
   color: #050211;
   list-style-type: none;
   margin-left: 10px;
-  width: 100;
+  font-size: 25px;
+}
+
+.div span{
+  background-color: blue;
+  float: right;
 }
