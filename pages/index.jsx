@@ -4,7 +4,7 @@ import Container from "../components/container/Container"
 import Titulo from "../components/titulo/Titulo"
 import Content from "../components/content/Content"
 import Input from "../components/input/Input"
-import Button from "../components/button/Button"
+import Button from "../components/Button/Button"
 
 
 function HomePage(){
