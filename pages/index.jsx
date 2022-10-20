@@ -19,8 +19,7 @@ function HomePage(){
     }else{
       alert("insira um valor")
       return
-    }
-    
+    } 
   }
 
   const apagar = (pos) => {
