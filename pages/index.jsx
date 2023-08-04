@@ -8,9 +8,10 @@ import Button from "../components/Button/Button"
 
 
 function HomePage(){
+  const [search,setSearch] = useState("")
   const [text,setText] = useState("")
-  const [list,setList] = useState(["tarefa1","tarefa2"])
-
+  const [list,setList] = useState([])
+ 
 
   function adicionar(){
     if(text){
@@ -29,9 +30,20 @@ function HomePage(){
     )
   }
 
+  const filterTasks = list.filter((task) => {
+    return task.includes(search)
+  })
+
   return(
     <>
       <Titulo titulo="Lista de Tarefas"/>
+
+      <Input 
+          placeholder="pesquisar" 
+          value={search} 
+          onChange={(e)=>{setSearch(e.target.value)}}
+       />
+
 
       <Container>
         <Content>
@@ -45,7 +57,8 @@ function HomePage(){
 
         <Content>
           {
-            list.map((task,pos)=>{
+
+            filterTasks.map((task,pos)=>{
               return(
                 <div className={styles.div} key={`item-${pos}`}>
                   <li>{task}<span onClick={()=>{apagar(pos)}}>X</span></li>
